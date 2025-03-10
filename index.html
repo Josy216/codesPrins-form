@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload Form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 350px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      textarea {
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 8px;
+        width: 100%;
+      }
+
+      input[type="file"] {
+        border: none;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+      .copy {
+        padding: 12px;
+        text-align: center;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <details>
+        <summary>Note to read</summary>
+        <p>
+          please make sure your photo is less than 5mb. also this registration
+          is to give me feedback on what you think if I start making youtube
+          videos for all this cool projecs on:
+          <a href="https://t.me/codesprin"> CodesPrint</a>
+        </p>
+      </details>
+      <h2>Fill form please</h2>
+      <form
+        id="uploadForm"
+        action="https://getform.io/f/bnlqnwqb"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="image">Upload Image</label>
+        <input
+          type="file"
+          id="image"
+          name="image"
+          accept="image/*"
+          required
+        /><label for="about">Tell Us More About Yourself</label>
+        <textarea
+          id="about"
+          name="about"
+          placeholder="Please add more about yourself"
+          rows="6"
+          required
+        ></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p class="copy">&copy; 2025 | CodesPrint</p>
+    </div>
+  </body>
+</html>
